@@ -1,0 +1,13 @@
+ 84~94
+<br>
+<h1>平假名</h1> 
+          <img src="attractions\50音\平-清音.png" width="700" height="775" >                        
+          <br>
+          <img src="attractions\50音\平-濁音.png" width="700" height="365" >           
+          <br>
+          <img src="attractions\50音\平-拗音.png" width="420" height="765" >
+          <br>
+          <img src="attractions\50音\平-小寫.png" width="560" height="115" >
+          <br>
+          <img src="attractions\50音\平-長音.png" width="700" height="180" >
+

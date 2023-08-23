@@ -1,0 +1,12 @@
+84~94
+<br>
+ <h1>片假名</h1> 
+            <img src="attractions\50音\片-清音.png" width="700" height="775" >
+            <br>
+            <img src="attractions\50音\片-濁音.png" width="700" height="365" >
+            <br>
+            <img src="attractions\50音\片-拗音.png" width="420" height="765" >
+            <br>
+            <img src="attractions\50音\片-小寫.png" width="560" height="115" >
+            <br>
+            <img src="attractions\50音\片-長音.png" width="700" height="115" >

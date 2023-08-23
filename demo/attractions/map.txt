@@ -1,0 +1,118 @@
+ 18~25
+<title>Leaflet Map Example</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <style>
+    #map {
+      width: 960px;
+      height: 720px;
+    }
+  </style>
+110~227
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+    var locations = [
+      {
+        name: "東京鐵塔",
+        latlng: [35.6586, 139.7454],
+        photo: "attractions/景點/東京鐵塔.jpg"
+      },
+      {
+        name: "伏見稻荷神社",
+        latlng: [34.9671, 135.7727],
+        photo: "attractions/景點/伏見稻荷大社.jpg"
+      },
+      {
+        name: "大阪城",
+        latlng: [34.6873, 135.5258],
+        photo: "attractions/景點/大阪城.jpg"
+      },
+      {
+        name: "大通公園",
+        latlng: [35.1991, 136.8447],
+        photo: "attractions/景點/大通公園.jpg"
+      },
+      {
+        name: "小樽運河",
+        latlng: [43.2022, 141.0006],
+        photo: "attractions/景點/小樽運河.jpg"
+      },
+      {
+        name: "日光東照宮",
+        latlng: [36.7578, 139.5993],
+        photo: "attractions/景點/日光東照宮.jpg"
+      },
+      {
+        name: "白色戀人觀光工廠",
+        latlng: [43.0889, 141.2717],
+        photo: "attractions/景點/白色戀人觀光工廠.jpg"
+      },
+      {
+        name: "白鬚瀑布",
+        latlng: [43.4746, 142.6393],
+        photo: "attractions/景點/白鬚瀑布.jpg"
+      },
+      {
+        name: "明治神宮",
+        latlng: [35.6764, 139.6993],
+        photo: "attractions/景點/明治神宮.jpg"
+      },
+      {
+        name: "金閣寺",
+        latlng: [35.0393, 135.7292],
+        photo: "attractions/景點/金閣寺.jpg"
+      },
+      {
+        name: "祇園祭",
+        latlng: [35.0041, 135.7581],
+        photo: "attractions/景點/祇園祭.jpg"
+      },
+      {
+        name: "淺草寺",
+        latlng: [35.7147, 139.7966],
+        photo: "attractions/景點/淺草寺.jpg"
+      },
+      {
+        name: "清水寺",
+        latlng: [34.9950, 135.7850],
+        photo: "attractions/景點/清水寺.jpg"
+      },
+      {
+        name: "通天閣",
+        latlng: [34.6526, 135.5062],
+        photo: "attractions/景點/通天閣.jpg"
+      },
+      {
+        name: "富士山河口湖",
+        latlng: [35.4925, 138.6847],
+        photo: "attractions/景點/富士山河口湖.jpg"
+      },
+      {
+        name: "晴空塔",
+        latlng: [35.7100, 139.8100],
+        photo: "attractions/景點/晴空塔.jpg"
+      }
+    ];
+
+    var map = L.map('map').setView([39, 138], 5); // 原始地圖
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      maxZoom: 18,
+    }).addTo(map);
+
+for (var i = 0; i < locations.length; i++) {
+  (function() {
+    var location = locations[i];
+
+    var marker = L.marker(location.latlng).addTo(map);
+
+    marker.on('click', function() {
+      // 圖片大小
+      var popupContent = "<h3>" + location.name + "</h3>" +
+                         "<img src='" + location.photo + "' alt='" + location.name + "' style='width: 150px; height: auto;'>";
+                        // 彈出窗口
+      marker.bindPopup(popupContent).openPopup();
+    });
+  })();
+}       
+  </script>
